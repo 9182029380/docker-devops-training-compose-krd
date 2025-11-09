@@ -35,7 +35,7 @@ public class EmployeeController {
     public Employee getByPhone(@PathVariable String phone){
         return service.getByPhone(phone);
     }
-    @GetMapping("/phone/{phone}")
+    @GetMapping("/email/{email}")
     public Employee getByEmail(@PathVariable String email){
         return service.getByEmail(email);
     }
