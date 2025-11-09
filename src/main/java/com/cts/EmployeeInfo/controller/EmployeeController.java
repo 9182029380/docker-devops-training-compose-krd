@@ -35,6 +35,10 @@ public class EmployeeController {
     public Employee getByPhone(@PathVariable String phone){
         return service.getByPhone(phone);
     }
+    @GetMapping("/phone/{phone}")
+    public Employee getByEmail(@PathVariable String email){
+        return service.getByEmail(email);
+    }
     @PutMapping("/{empid}")
     public Employee updateByEmpid(@PathVariable String empid,@RequestBody Employee emp){
         return service.updateByEmpid(empid,emp);

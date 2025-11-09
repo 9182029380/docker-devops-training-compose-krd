@@ -46,4 +46,8 @@ public class EmployeeService {
         Employee existingEmployee = repo.findByEmpid(empid).orElseThrow(() -> new EntityNotFoundException("Employee not found with id: " + empid));
         repo.delete(existingEmployee);
     }
+
+    public Employee getByEmail(String email) {
+        return repo.findByEmail(email);
+    }
 }

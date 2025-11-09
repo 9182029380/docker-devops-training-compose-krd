@@ -15,4 +15,6 @@ public interface Employeerepo extends JpaRepository<Employee,Integer> {
     Optional<Employee> findByEmpid(String empid);
 
     Employee findByPhonenumber(String phone);
+
+    Employee findByEmail(String email);
 }
